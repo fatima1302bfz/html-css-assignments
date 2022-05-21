@@ -1,0 +1,238 @@
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        --maincolor1: #ff6720;
+        --maincolor2: #009688;
+        --secondcolor: #fff;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    h1:nth-of-type(1),
+    h1:nth-of-type(2) {
+        width: 150px;
+        padding: 20px;
+        margin: 50px auto;
+        text-align: center;
+        position: relative;
+        color: var(--secondcolor)
+    }
+    
+    h1:nth-of-type(1) {
+        background-color: var(--maincolor1);
+    }
+    
+    h1:nth-of-type(1):before,
+    h1:nth-of-type(1):after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-color: var(--maincolor1);
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    
+    h1:nth-of-type(1)::before {
+        transform: skew(-10deg, -10deg);
+        -webkit-transform: skew(-10deg, -10deg);
+        -moz-transform: skew(-10deg, -10deg);
+        -ms-transform: skew(-10deg, -10deg);
+        -o-transform: skew(-10deg, -10deg);
+    }
+    
+    h1:nth-of-type(1)::after {
+        transform: skew(10deg, 10deg);
+        -webkit-transform: skew(10deg, 10deg);
+        -moz-transform: skew(10deg, 10deg);
+        -ms-transform: skew(10deg, 10deg);
+        -o-transform: skew(10deg, 10deg);
+    }
+    /*part2*/
+    
+    h1:nth-of-type(2) {
+        padding: 20px;
+        background-color: var(--maincolor2);
+        margin-top: 100px;
+    }
+    
+    h1:nth-of-type(2)::before,
+    h1:nth-of-type(2)::after {
+        content: '';
+        position: absolute;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: var(--maincolor2);
+        z-index: -1;
+    }
+    
+    h1:nth-of-type(2)::before {
+        width: 100%;
+        transform: translate(-20px) skewX(20deg);
+        -webkit-transform: translate(-20px) skewX(20deg);
+        -moz-transform: translate(-20px) skewX(20deg);
+        -ms-transform: translate(-20px) skewX(20deg);
+        -o-transform: translate(-20px) skewX(20deg);
+    }
+    
+    h1:nth-of-type(2)::after {
+        width: 10%;
+        transform: translate(-43px) skewX(20deg);
+        -webkit-transform: translate(-43px) skewX(20deg);
+        -moz-transform: translate(-43px) skewX(20deg);
+        -ms-transform: translate(-43px) skewX(20deg);
+        -o-transform: translate(-43px) skewX(20deg);
+    }
+    /*part3*/
+    /*.class {
+     matrix(3, 0.2679, 0, 3, 20, 100):;
+  transform: translateX(20px) translateY(100px) scalex(3px) skewY(15deg) skewX(0) scaleY(3px);
+  -webkit-transform: translateX(20px) translateY(100px) scalex(3px) skewY(15deg) skewX(0) scaleY(3px);
+  -moz-transform: translateX(20px) translateY(100px) scalex(3px) skewY(15deg) skewX(0) scaleY(3px);
+  -ms-transform: translateX(20px) translateY(100px) scalex(3px) skewY(15deg) skewX(0) scaleY(3px);
+  -o-transform: translateX(20px) translateY(100px) scalex(3px) skewY(15deg) skewX(0) scaleY(3px);
+}*/
+    /*part 4 */
+    
+    div:nth-of-type(1) {
+        width: 200px;
+        height: 200px;
+        margin: 150px auto;
+        padding: 20px;
+        position: relative;
+        background-color: rgb(91, 128, 155);
+        border-bottom: 5px solid #000
+    }
+    
+    div:nth-of-type(1)::before {
+        content: "";
+        width: 69%;
+        height: 69%;
+        z-index: 1;
+        background-color: #000;
+        position: absolute;
+        top: -69px;
+        left: 29px;
+        transform: rotate(45deg);
+        border-right: 4px solid var(--secondcolor);
+        border-bottom: 4px solid var(--secondcolor);
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+    }
+    
+    div:nth-of-type(1)::after {
+        content: "Elzero";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 10px;
+        color: var(--secondcolor);
+        font-size: 1.3rem;
+        font-weight: bold;
+    }
+    /* part5 - #card 01 */
+    
+    div:nth-of-type(2),
+    div:nth-of-type(3) {
+        width: 200px;
+        height: 300px;
+        margin: 50px auto;
+        position: relative;
+        transform-origin: center center;
+        -webkit-transform-origin: center center;
+        -ms-transform-origin: center center;
+        transform-style: preserve-3d;
+        transition: transform 1s linear;
+        -webkit-transition: transform 1s linear;
+        -o-transition: transform 1s linear;
+        -moz-transition: transform 1s linear;
+        -ms-transition: transform 1s linear;
+    }
+    
+    div:nth-of-type(2):before,
+    div:nth-of-type(3):before {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgb(255, 0, 85);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: var(--secondcolor);
+        text-transform: capitalize;
+    }
+    
+    div:nth-of-type(2):before {
+        content: 'Nadjiba';
+        background-image: url("images/butterfly.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    div:nth-of-type(3):before {
+        content: 'Abdennour';
+        background-image: url("images/super.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    div:nth-of-type(2):after,
+    div:nth-of-type(3):after {
+        content: "front-end developer";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1rem;
+        font-weight: bold;
+        color: var(--secondcolor);
+        text-transform: capitalize;
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+    }
+    
+    div:nth-of-type(2):after {
+        background-color: rgb(237, 6, 168);
+        transform: rotateY(180deg);
+        -webkit-transform: rotateY(180deg);
+        -ms-transform: rotateY(180deg);
+        -moz-transform: rotateY(180deg);
+        -o-transform: rotateY(180deg);
+    }
+    
+    div:nth-of-type(2):hover {
+        transform: rotateY(180deg);
+        -webkit-transform: rotateY(180deg);
+        -ms-transform: rotateY(180deg);
+        -moz-transform: rotateY(180deg);
+        -o-transform: rotateY(180deg);
+    }
+    
+    div:nth-of-type(3):after {
+        background-color: rgb(6, 179, 237);
+        transform: rotateX(180deg);
+        -webkit-transform: rotateX(180deg);
+        -ms-transform: rotateX(180deg);
+        -moz-transform: rotateX(180deg);
+        -o-transform: rotateX(180deg);
+    }
+    
+    div:nth-of-type(3):hover {
+        transform: rotateX(180deg);
+        -webkit-transform: rotateX(180deg);
+        -ms-transform: rotateX(180deg);
+        -moz-transform: rotateX(180deg);
+        -o-transform: rotateX(180deg);
+    }
